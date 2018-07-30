@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "aa2de84a-fcfa-4e7f-91ad-e11434a129b3",
+		"name": "craft-beer-test-microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "db753fb8-b424-4306-9e72-0052a06e343f",
+			"name": "salvar-cerveja-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\n\t\"nome\": \"Paulaner\", \n\t\"paisOrigem\":\"Alemanha\",\n\t\"tipo\":\"weisebier\",\n\t\"ingredientes\":\"trigo cevada agua\",\n\t\"qtde\":750.0 \n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "79cfa0da-e94d-4f40-a435-13afe75f99bc",
+			"name": "salvar-cerveja-3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"nome\": \"hofbrau\",\n\t\"paisOrigem\":\"Alemanha\",\n\t\"tipo\":\"weisebier\",\n\t\"ingredientes\":\"trigo, cevada, agua, lupulo\",\n\t\"qtde\":1000.0 \n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"save"
+					]
+				},
+				"description": "salva a terceira cerveja no bd"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "c9c94825-f420-436d-a81e-0ca2e297680b",
+			"name": "salva-cerveja-4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n \t\"nome\": \"Baden Baden\",\n \t\"paisOrigem\":\"brasil\",\n \t\"tipo\":\"pilsen\",\n \t\"ingredientes\":\"cevada, agua, lúpulo\",\n \t\"qtde\":500.0 \n \t\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "37189725-04ee-4544-8ecc-fbe9b638bc39",
+			"name": "exclui cerveja pelo id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\t\"id\": 1,\n\t\"nome\": \"rofer\",\n\t\"paisOrigem\":\"brasil\",\n\t\"tipo\":\"weisebier\",\n\t\"ingredientes\":\"trigo cevada agua\",\n\t\"qtde\":500.0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "75c947b4-8bc2-4db2-aa2c-c511f053a5be",
+			"name": "atualizar-cervjea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"id\": 2,\n\t\"nome\": \"Paulaner Weisebier\", \n\t\"paisOrigem\":\"Alemanha\",\n\t\"tipo\":\"weisebier\",\n\t\"ingredientes\":\"trigo, cevada, agua \",\n\t\"qtde\":750.0 \n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "fdd028d1-05ec-4fe7-8a04-bbfa69e32ac3",
+			"name": "salvar-cerveja-1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "55565904-18c3-4907-88dc-943ec3561b07",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\t\"nome\": \"rofer\",\n\t\"paisOrigem\":\"brasil\",\n\t\"tipo\":\"weisebier\",\n\t\"ingredientes\":\"trigo cevada agua\",\n\t\"qtde\":500.0\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "51a43fc2-7206-4496-8860-7a875f4aed21",
+			"name": "recupera-lista-cervejas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/craft-beer/api/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"craft-beer",
+						"api",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
